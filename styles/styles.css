@@ -13,6 +13,221 @@
   font-display: swap;
 }
 body {
-  font-family: "pt sans", sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
+  line-height: 21px;
+  background-color: #fff;
+  color: #000;
+}
+
+/* Общие стили для всех страниц */
+.page-header {
+}
+.header-logo {
+}
+.header-logo-image {
+}
+.header-menu {
+}
+.menu-list {
+}
+.menu-item {
+}
+.menu-link {
+  color: inherit;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+}
+.menu-item-current {
+}
+.menu-user {
+}
+.visually-hidden {
+}
+.favorits-counter {
+  font-size: 10px;
+  line-height: 13px;
+}
+.header-button {
+}
+.header-button-link {
+  background-color: #756257;
+  color: #fff;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+/* Стили для index.html */
+
+.main-index {
+}
+.logo {
+}
+.slogan {
+}
+.slogan-title {
+}
+.slogan-advantages {
+}
+.advantage {
+}
+.advantages-list {
+}
+.advantages-item {
+}
+.advantage-title {
+}
+.advantage-number {
+}
+.advantage-description {
+}
+.recommendation {
+}
+.recommendation-title {
+}
+.recommendation-description {
+}
+.white-item {
+}
+.intrested {
+}
+.intrested-title {
+}
+.intrested-text {
+}
+.intrested-button {
+}
+.page-footer {
+}
+.footer-newsletter {
+}
+.newsletter-title {
+}
+.newsletter-text {
+}
+.newsletter-form {
+}
+.newsletter-field {
+}
+.newsletter-button {
+}
+.footer-social {
+}
+.footer-social-list {
+}
+.footer-social-item {
+}
+.footer-social-icon {
+}
+.footer-phone-link {
+}
+.about {
+}
+/* Стили для Catalog.html */
+
+.main-catalog {
+}
+.catalog-header {
+}
+.catalog-header-title {
+}
+.breadcrumbs {
+}
+.breadcrumbs-item {
+}
+.breadcrumbs-link {
+}
+.catalog-hotels {
+}
+.hotels-filter {
+}
+.hotels-filter-group {
+}
+.hotels-filter-title {
+}
+.hotels-filter-list {
+}
+.hotels-filter-item {
+}
+.control {
+}
+.control-input {
+}
+.hotels-filter-price {
+}
+.apply-button {
+}
+.cancel-button {
+}
+.search {
+}
+.search-count {
+}
+.select-control {
+}
+.view {
+}
+.hotels-list {
+}
+.hotel-card {
+}
+.hotel-card-image {
+}
+.hotel-card-title {
+}
+.type {
+}
+.price {
+}
+.hotel-card-link {
+}
+.add-favorits {
+}
+.rating {
+}
+.favorite {
+}
+.pagination-more {
+}
+.pagination {
+}
+.pagination-item {
+}
+.pagination-link {
+}
+.pagination-current {
+}
+.number-hotels {
+}
+.select-cards {
+}
+.footer-newsletter {
+}
+.newsletter-catalog {
+}
+.newsletter-title {
+}
+.newsletter-text {
+}
+.newsletter-form {
+}
+.newsletter-field {
+}
+.field-beige {
+}
+.newsletter-button {
+}
+.footer-social {
+}
+.footer-social-list {
+}
+.footer-social-item {
+}
+.footer-social-icon {
+}
+.footer-phone-link {
+}
+.about {
 }
