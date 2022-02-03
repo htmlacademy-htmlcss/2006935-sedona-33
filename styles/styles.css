@@ -39,6 +39,7 @@ body {
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
+  text-align: center;
 }
 .menu-item-current {
 }
@@ -63,55 +64,119 @@ body {
 
 .main-index {
 }
+.main-header {
+  background: #117a65;
+  background-image: url("/images/index/background-top.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
 .logo {
 }
 .slogan {
+  text-align: center;
 }
 .slogan-title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 .slogan-advantages {
+  font-size: 22px;
+  line-height: 36px;
+  color: #333333;
 }
 .advantage {
 }
 .advantages-list {
+  text-align: center;
 }
 .advantages-item {
 }
-.advantage-title {
+.advantage-title,
+.recommendation-title {
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+.recommendation-title {
+  /* Здесь будет другой отступ снизу в отличие от .advantage-title */
 }
 .advantage-number {
 }
-.advantage-description {
+.advantage-description,
+.recommendation-description {
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
 }
 .recommendation {
 }
-.recommendation-title {
+.blue-item {
+  background: #83b3d3;
+  color: #ffffff;
 }
-.recommendation-description {
+.blue-item .advantage-description {
+  color: #ffffff;
 }
 .white-item {
 }
 .intrested {
+  text-align: center;
 }
 .intrested-title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 .intrested-text {
+  font-size: 22px;
+  line-height: 26px;
+  color: #333333;
 }
 .intrested-button {
+  background-color: #756257;
+  color: #fff;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 .page-footer {
 }
 .footer-newsletter {
+  background: #117a65;
+  background-image: url("/images/index/background-bottom.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  text-align: center;
 }
 .newsletter-title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 .newsletter-text {
+  font-size: 22px;
+  line-height: 26px;
 }
 .newsletter-form {
 }
 .newsletter-field {
+  font-size: 18px;
+  line-height: 26px;
 }
 .newsletter-button {
+  background: #83b3d3;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 .footer-social {
 }
@@ -122,6 +187,10 @@ body {
 .footer-social-icon {
 }
 .footer-phone-link {
+  color: inherit;
+  text-decoration: none;
+  font-size: 40px;
+  line-height: 40px;
 }
 .about {
 }
