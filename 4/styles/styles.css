@@ -1,0 +1,305 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  background-color: #fff;
+  color: #000;
+}
+
+/* Общие стили для всех страниц */
+.menu-link {
+  color: inherit;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+}
+.favorits-counter {
+  font-size: 10px;
+  line-height: 13px;
+}
+.header-button-link {
+  background-color: #756257;
+  color: #fff;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+/* Стили для index.html */
+
+.main-header {
+  background: #5f9ea0;
+  background-image: url("/images/index/background-top.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+.slogan {
+  text-align: center;
+}
+.slogan-title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.slogan-advantages {
+  font-size: 22px;
+  line-height: 36px;
+  color: #333333;
+}
+.advantages-list {
+  text-align: center;
+}
+.advantage-title,
+.recommendation-title {
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+.recommendation-title {
+  /* Здесь будет другой отступ снизу в отличие от .advantage-title */
+}
+.advantage-description,
+.recommendation-description,
+.advantage-number {
+  color: #333333;
+}
+.blue-item {
+  background-color: #83b3d3;
+  color: #ffffff;
+}
+/* здесь пока не пойму почему при задании цвета .blue-item
+он не наследуется текстом */
+.blue-item .advantage-description {
+  color: #ffffff;
+}
+.white-item {
+  background-color: #ffffff;
+  color: #000;
+}
+.gray-item {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+.lightgray-item {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+/* ...зато понял, как работает свойство opacity */
+.intrested {
+  text-align: center;
+}
+.intrested-title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.intrested-text {
+  font-size: 22px;
+  line-height: 26px;
+  color: #333333;
+}
+.intrested-button {
+  background-color: #756257;
+  color: #fff;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.footer-newsletter {
+  background: #117a65;
+  background-image: url("/images/index/background-bottom.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  text-align: center;
+}
+.newsletter-title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.newsletter-text {
+  font-size: 22px;
+  line-height: 26px;
+}
+.newsletter-field {
+  background-color: #f2f2f2;
+  line-height: 26px;
+  border: none;
+}
+.newsletter-button {
+  background: #83b3d3;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+}
+.footer-phone-link {
+  color: inherit;
+  text-decoration: none;
+  font-size: 40px;
+  line-height: 40px;
+}
+/* Стили для Catalog.html */
+.header-search {
+  background: #5f9ea0;
+  background-image: url("/images/catalog/catalog-background-top.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+.catalog-header-title {
+  font-size: 60px;
+  line-height: 77.7px;
+  font-weight: 700;
+  color: #fff;
+}
+.breadcrumbs {
+  font-size: 16px;
+  line-height: 20.72px;
+  color: #fff;
+}
+.breadcrumbs-link {
+  text-decoration: none;
+  color: inherit;
+}
+.hotels-filter-group {
+  color: #fff;
+}
+.hotels-filter-title {
+  font-size: 20px;
+  line-height: 25.9px;
+  font-weight: 700;
+  color: #fff;
+}
+.control {
+  line-height: 23.31px;
+}
+.control-input {
+  color: #fff;
+  background-color: inherit;
+  font-size: 18px;
+  border: 2px solid #ffffff;
+}
+.apply-button {
+  background: #83b3d3;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20.72px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+}
+.cancel-button {
+  background-color: inherit;
+  color: #ffffff;
+  font-size: 18px;
+  border: none;
+}
+.search {
+  font-size: 30px;
+  line-height: 38.85px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.select-control {
+  color: #333333;
+  font-size: 18px;
+  line-height: 23.31px;
+}
+.hotel-card {
+  line-height: 23.31px;
+  color: #333333;
+}
+.hotel-card-title {
+  font-size: 24px;
+  line-height: 31.08px;
+  font-weight: 700;
+}
+.hotel-card-link {
+  background: #756257;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20.72px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.add-favorits {
+  background: #83b3d3;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20.72px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.rating {
+  background: #f2f2f2;
+  text-decoration: none;
+  color: #333333;
+  font-size: 16px;
+  line-height: 20.72px;
+  text-transform: uppercase;
+}
+.favorite {
+  background: #7db54f;
+}
+.pagination-more {
+  background: #83b3d3;
+  font-size: 20px;
+  line-height: 25.9px;
+  font-weight: 700;
+  color: #ffffff;
+  border: none;
+  text-transform: uppercase;
+}
+.pagination {
+  font-size: 20px;
+  line-height: 25.9px;
+  font-weight: 700;
+  color: #ffffff;
+  border: none;
+}
+.pagination-link {
+  background: #83b3d3;
+}
+.pagination-current {
+  background: #f2f2f2;
+  color: #000;
+}
+.number-hotels {
+  color: #333333;
+}
+.select-cards {
+  color: #333333;
+  border: 2px solid #e5e5e5;
+}
+.newsletter-catalog {
+  background: #ffffff;
+}
+.newsletter-title-catalog {
+  color: #000;
+}
+.newsletter-text-catalog {
+  color: #333333;
+}
