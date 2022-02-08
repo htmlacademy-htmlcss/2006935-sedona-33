@@ -16,8 +16,8 @@ body {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
-  background-color: #fff;
-  color: #000;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 /* Общие стили для всех страниц */
@@ -35,7 +35,7 @@ body {
 }
 .header-button-link {
   background-color: #756257;
-  color: #fff;
+  color: #ffffff;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -79,26 +79,23 @@ body {
 .advantage-number {
   color: #333333;
 }
-.blue-item {
+.advantages-item:nth-child(1),
+.advantages-item:nth-child(5) {
   background-color: #83b3d3;
   color: #ffffff;
 }
-/* здесь пока не пойму почему при задании цвета .blue-item
-он не наследуется текстом */
-.blue-item .advantage-description {
+.advantages-item:nth-child(1) .advantage-number,
+.advantages-item:nth-child(1) .advantage-description,
+.advantages-item:nth-child(5) .advantage-number,
+.advantages-item:nth-child(5) .advantage-description {
   color: #ffffff;
 }
-.white-item {
-  background-color: #ffffff;
-  color: #000;
-}
-.gray-item {
-  background-color: rgba(131, 179, 211, 0.2);
-}
-.lightgray-item {
+.advantages-item:nth-child(2n) {
   background-color: rgba(131, 179, 211, 0.12);
 }
-/* ...зато понял, как работает свойство opacity */
+.advantages-item:nth-child(7) {
+  background-color: rgba(131, 179, 211, 0.2);
+}
 .intrested {
   text-align: center;
 }
@@ -115,7 +112,7 @@ body {
 }
 .intrested-button {
   background-color: #756257;
-  color: #fff;
+  color: #ffffff;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
@@ -169,33 +166,33 @@ body {
 }
 .catalog-header-title {
   font-size: 60px;
-  line-height: 77.7px;
+  line-height: 78px;
   font-weight: 700;
-  color: #fff;
+  color: #ffffff;
 }
 .breadcrumbs {
   font-size: 16px;
-  line-height: 20.72px;
-  color: #fff;
+  line-height: 21px;
+  color: #ffffff;
 }
 .breadcrumbs-link {
   text-decoration: none;
   color: inherit;
 }
 .hotels-filter-group {
-  color: #fff;
+  color: #ffffff;
 }
 .hotels-filter-title {
   font-size: 20px;
-  line-height: 25.9px;
+  line-height: 26px;
   font-weight: 700;
-  color: #fff;
+  color: #ffffff;
 }
 .control {
-  line-height: 23.31px;
+  line-height: 23px;
 }
 .control-input {
-  color: #fff;
+  color: #ffffff;
   background-color: inherit;
   font-size: 18px;
   border: 2px solid #ffffff;
@@ -204,7 +201,7 @@ body {
   background: #83b3d3;
   color: #ffffff;
   font-size: 16px;
-  line-height: 20.72px;
+  line-height: 21px;
   font-weight: 700;
   text-transform: uppercase;
   border: none;
@@ -217,22 +214,22 @@ body {
 }
 .search {
   font-size: 30px;
-  line-height: 38.85px;
+  line-height: 39px;
   font-weight: 700;
   text-transform: uppercase;
 }
 .select-control {
   color: #333333;
   font-size: 18px;
-  line-height: 23.31px;
+  line-height: 23px;
 }
 .hotel-card {
-  line-height: 23.31px;
+  line-height: 23px;
   color: #333333;
 }
 .hotel-card-title {
   font-size: 24px;
-  line-height: 31.08px;
+  line-height: 31px;
   font-weight: 700;
 }
 .hotel-card-link {
@@ -240,7 +237,7 @@ body {
   text-decoration: none;
   color: #ffffff;
   font-size: 16px;
-  line-height: 20.72px;
+  line-height: 21px;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -249,7 +246,7 @@ body {
   text-decoration: none;
   color: #ffffff;
   font-size: 16px;
-  line-height: 20.72px;
+  line-height: 21px;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -258,7 +255,7 @@ body {
   text-decoration: none;
   color: #333333;
   font-size: 16px;
-  line-height: 20.72px;
+  line-height: 21px;
   text-transform: uppercase;
 }
 .favorite {
@@ -267,7 +264,7 @@ body {
 .pagination-more {
   background: #83b3d3;
   font-size: 20px;
-  line-height: 25.9px;
+  line-height: 26px;
   font-weight: 700;
   color: #ffffff;
   border: none;
@@ -275,7 +272,7 @@ body {
 }
 .pagination {
   font-size: 20px;
-  line-height: 25.9px;
+  line-height: 26px;
   font-weight: 700;
   color: #ffffff;
   border: none;
@@ -285,7 +282,7 @@ body {
 }
 .pagination-current {
   background: #f2f2f2;
-  color: #000;
+  color: #000000;
 }
 .number-hotels {
   color: #333333;
@@ -298,7 +295,7 @@ body {
   background: #ffffff;
 }
 .newsletter-title-catalog {
-  color: #000;
+  color: #000000;
 }
 .newsletter-text-catalog {
   color: #333333;
