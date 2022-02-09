@@ -35,6 +35,10 @@ body {
   margin: 0 auto;
 }
 /* Общие стили для всех страниц */
+.header-logo {
+  width: 140px;
+  margin-right: 30px;
+}
 .header-menu {
   display: flex;
   width: 1060px;
@@ -212,18 +216,23 @@ body {
 .about {
   display: block;
 }
-/* Стили для Catalog.html */
+/* ------------- Стили для Catalog.html -------------------- */
+.main-container {
+}
 .header-search {
   background: #5f9ea0;
   background-image: url("/images/catalog/catalog-background-top.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
+  padding: 35px 72px 83px;
 }
 .catalog-header-title {
   font-size: 60px;
   line-height: 78px;
   font-weight: 700;
   color: #ffffff;
+  margin: 0;
+  padding: 0;
 }
 .breadcrumbs {
   font-size: 16px;
@@ -233,6 +242,9 @@ body {
 .breadcrumbs-link {
   text-decoration: none;
   color: inherit;
+}
+.hotels-filter {
+  display: flex;
 }
 .hotels-filter-group {
   color: #ffffff;
@@ -266,6 +278,10 @@ body {
   color: #ffffff;
   font-size: 18px;
   border: none;
+}
+.search-container {
+  width: 1058px;
+  margin: 0 auto;
 }
 .search {
   font-size: 30px;
