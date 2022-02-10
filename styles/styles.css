@@ -189,10 +189,6 @@ body {
   text-transform: uppercase;
   border: none;
 }
-.page-footer-container {
-  width: 1200px;
-  margin: 0 auto;
-}
 .footer-bottom-wrapper {
   display: flex;
   justify-content: space-between;
@@ -217,8 +213,6 @@ body {
   display: block;
 }
 /* ------------- Стили для Catalog.html -------------------- */
-.main-container {
-}
 .header-search {
   background: #5f9ea0;
   background-image: url("/images/catalog/catalog-background-top.jpg");
