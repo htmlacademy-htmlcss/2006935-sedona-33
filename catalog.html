@@ -17,13 +17,13 @@
         </a>
         <ul class="menu-list">
           <li class="menu-item">
-            <a href="" class="menu-link menu-item-current">Главная</a>
+            <a href="" class="menu-link">Главная</a>
           </li>
           <li class="menu-item">
             <a href="#" class="menu-link">О Седоне</a>
           </li>
           <li class="menu-item">
-            <a href="catalog.html" class="menu-link">Гостиницы</a>
+            <a href="catalog.html" class="menu-link menu-item-current">Гостиницы</a>
           </li>
         </ul>
         <ul class="menu-list menu-user">
@@ -46,7 +46,7 @@
           <h1 class="catalog-header-title">Гостиницы Седоны</h1>
           <ul class="breadcrumbs">
             <li class="breadcrumbs-item">
-              <a href="index.html" class="breadcrumbs-link">
+              <a href="index.html" class="breadcrumbs-link breadcrumbs-index">
                 <span class="visually-hidden">Вернуться на главную</span>
               </a>
             </li>
@@ -115,30 +115,33 @@
               до
             </label>
           </fieldset>
-          <button class="apply-button" type="submit">Применить</button>
-          <button class="cancel-button" type="reset">Сбросить</button>
+          <div class="filter-buttons">
+            <button class="apply-button" type="submit">Применить</button>
+            <button class="cancel-button" type="reset">Сбросить</button>
+          </div>
         </form>
       </div>
       <section class="catalog-hotels">
         <div class="search-container">
-          <p class="search">Найдено гостиниц:
-            <span class="search-count">38</span>
-          </p>
-          <select class="select-control" aria-label="Сортировка">
-            <option value="cheap">Сначала дешёвые</option>
-            <option value="popular">Сначала популярные</option>
-            <option value="expensive">Сначала дорогие</option>
-          </select>
-          <a href="#" class="view">
-            <span class="visually-hidden">Показать карточки</span>
-          </a>
-          <a href="#" class="view">
-            <span class="visually-hidden">Показать как слайдшоу</span>
-          </a>
-          <a href="#" class="view">
-            <span class="visually-hidden">Показать список</span>
-          </a>
-
+          <div class="sorting">
+            <p class="search">Найдено гостиниц:
+              <span class="search-count">38</span>
+            </p>
+            <select class="select-control" aria-label="Сортировка">
+              <option value="cheap">Сначала дешёвые</option>
+              <option value="popular">Сначала популярные</option>
+              <option value="expensive">Сначала дорогие</option>
+            </select>
+            <a href="#" class="view current-view">
+              <span class="visually-hidden">Показать карточки</span>
+            </a>
+            <a href="#" class="view">
+              <span class="visually-hidden">Показать как слайдшоу</span>
+            </a>
+            <a href="#" class="view">
+              <span class="visually-hidden">Показать список</span>
+            </a>
+          </div>
           <ul class="hotels-list">
             <li class="hotel-card">
               <img src="images/catalog/amara.jpg" alt="Гостиница Amara Resort & Spa" class="hotel-card-image"
@@ -185,41 +188,46 @@
               <span class="rating">Рейтинг: 9,2</span>
             </li>
           </ul>
-          <button class="pagination-more" type="button">Загрузить ещё</button>
+          <div class="download-more">
+            <button class="button-more" type="button">Загрузить ещё</button>
+          </div>
+
           <span class="visually-hidden">Переход между страницами</span>
-          <ul class="pagination">
-            <li class="pagination-item">
-              <a class="pagination-link pagination-current">1</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link">2</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link">3</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link">4</a>
-            </li>
-            <li class="pagination-item">
-              <span class="visually-hidden">Следующие страницы</span>
-              <a class="pagination-link">...</a>
-            </li>
-            <li class="pagination-item">
-              <span class="visually-hidden">Последняя страница</span>
-              <a class="pagination-link">10</a>
-            </li>
-          </ul>
-          <label class="number-hotels">
-            Гостиниц на странице:
-            <select class="select-cards">
-              <option value="4">4</option>
-              <option value="6">6</option>
-              <option value="8">8</option>
-              <option value="10">10</option>
-              <option value="12">12</option>
-              <option value="14">14</option>
-            </select>
-          </label>
+          <div class="pagination-container">
+            <ul class="pagination">
+              <li class="pagination-item">
+                <a class="pagination-link pagination-current">1</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link">2</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link">3</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link">4</a>
+              </li>
+              <li class="pagination-item">
+                <span class="visually-hidden">Следующие страницы</span>
+                <a class="pagination-link">...</a>
+              </li>
+              <li class="pagination-item">
+                <span class="visually-hidden">Последняя страница</span>
+                <a class="pagination-link">10</a>
+              </li>
+            </ul>
+            <label class="number-hotels">
+              Гостиниц на странице:
+              <select class="select-cards">
+                <option value="4">4</option>
+                <option value="6">6</option>
+                <option value="8">8</option>
+                <option value="10">10</option>
+                <option value="12">12</option>
+                <option value="14">14</option>
+              </select>
+            </label>
+          </div>
         </div>
       </section>
 
