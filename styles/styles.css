@@ -171,8 +171,6 @@ body {
   margin-bottom: 91px;
 }
 .advantages-list {
-  display: flex;
-  flex-wrap: wrap;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -181,8 +179,6 @@ body {
 .advantages-item {
   display: flex;
   flex-direction: column;
-  width: 400px;
-  height: 384px;
   justify-content: center;
 }
 .item-town,
@@ -198,13 +194,6 @@ body {
 }
 .item-road {
   background-color: rgba(131, 179, 211, 0.2);
-}
-.item-town-image {
-  content: url("/images/index/advantage-1-town.jpg");
-}
-
-.item-bridge-image {
-  content: url("/images/index/advantage-2-brige.jpg");
 }
 .advantage-title,
 .recommendation-title {
@@ -255,9 +244,11 @@ body {
   margin-bottom: 52px;
 }
 .intrested-button {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   width: 575px;
   padding: 15px 0;
+  margin: 0 auto;
   background-color: #756257;
   color: #ffffff;
   font-size: 20px;
@@ -420,7 +411,7 @@ body {
   border-radius: 4px;
   margin-right: 81px;
 }
-.view {
+.sorting-view-button {
   width: 48px;
   height: 48px;
   box-sizing: border-box;
@@ -431,7 +422,7 @@ body {
 .view:last-child {
   margin-right: 0px;
 }
-.current-view {
+.current-view-button {
   border: 2px solid #000000;
 }
 /* ----- карточки гостиниц ----- */
