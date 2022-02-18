@@ -173,46 +173,36 @@ body {
 .advantages-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(4, 384px);
   grid-template-areas:
     "town town town"
     "house food souvenirs"
     "bridge bridge bridge"
     "area road tourists";
-  /* Нужно ли в явном виде задавать значение для каждой области? */
   text-align: center;
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
-/* Продолжаю тренироваться с этими картинками.)) */
-.item-town {
-  grid-area: town;
-  background-image: url("/images/index/advantage-1-town.jpg");
-  background-position: right;
-  background-repeat: no-repeat;
-}
-.item-town-description {
-  align-self: flex-start;
-  /* Вот тут ничего не понял. Перепробовал все свойства. Это же грид,
-  тут должно работать значение "start(end)", но работает Flex-start(end)!!!*/
-  width: 33.3%;
-}
-.item-bridge {
-  grid-area: bridge;
-  background-image: url("/images/index/advantage-2-brige.jpg");
-  background-position: left;
-  background-repeat: no-repeat;
-}
-.item-bridge-description {
-  align-self: flex-end;
-  width: 33.3%;
-}
-
 .advantages-item {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 384px;
+  box-sizing: border-box;
+}
+.item-town {
+  grid-area: town;
+  flex-direction: row;
+  align-items: center;
+}
+.item-bridge {
+  grid-area: bridge;
+  flex-direction: row;
+  align-items: center;
+}
+.item-bridge-image,
+.item-town-image {
+  object-fit: contain;
 }
 .item-town,
 .item-bridge {
@@ -322,20 +312,16 @@ body {
   margin-bottom: 42px;
 }
 .newsletter-form {
-  /* Здесь я полюбил гриды. Была проблема с отступом
-  между полем и кнопкой, а сама кнопка была смещена вверх.
-  Грид - и проблемы нет. */
-  display: grid;
-  grid-template-columns: 600px 200px;
-  height: 60px;
+  display: flex;
 }
 .newsletter-field {
   box-sizing: border-box;
   background-color: #f2f2f2;
   line-height: 26px;
   border: none;
+  width: 600px;
   padding: 0;
-  padding: 0 19px 0 22px;
+  padding: 17px 19px 17px 22px;
   margin: 0;
   border-radius: 10px 0 0 10px;
 }
@@ -349,6 +335,8 @@ body {
   border: none;
   padding: 0;
   margin: 0;
+  width: 200px;
+  padding: 17px 0;
   border-radius: 0 10px 10px 0;
 }
 /* ------------- Стили для Catalog.html -------------------- */
@@ -628,8 +616,7 @@ body {
   border: 2px solid #e5e5e5;
   margin-left: 51px;
   width: 160px;
-  height: 48px;
-  padding-left: 17px;
+  padding: 17px 0 15px 17px;
   border-radius: 4px;
 }
 .newsletter-catalog {
