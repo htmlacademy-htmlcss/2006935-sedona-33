@@ -45,36 +45,49 @@ body {
   margin: 0 auto;
 }
 /* ------------------- Общие стили для всех страниц -------------------- */
-
+.header-logo {
+  display: flex;
+}
 .header-menu {
   display: flex;
   width: 1060px;
   margin: 0 auto;
-  /* Не могу найти почему блок меню растягивается вниз на лишние, примерно, 7px */
-  margin-bottom: -7px;
+  display: flex;
+  position: relative;
+  z-index: 2;
 }
 .header-logo {
-  width: 140px;
+  width: 139px;
   margin-right: 30px;
 }
 .menu-list {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   width: 460px;
   margin: 0;
   padding: 0;
   list-style-type: none;
+  position: relative;
+  top: -4px;
 }
 .menu-user {
-  width: 310px;
+  width: 320px;
   margin-left: auto;
-  margin-top: 11px;
+  margin-right: 4px;
+  justify-content: flex-end;
 }
-.menu-user .menu-link {
-  min-width: 18px;
-  min-height: 18px;
+.menu-item-current::after {
+  position: absolute;
+  left: 17px;
+  right: 17px;
+  bottom: 2px;
+  height: 2px;
+  background-color: #756257;
+  content: "";
 }
 .menu-link {
+  position: relative;
   display: block;
   color: inherit;
   text-decoration: none;
@@ -84,30 +97,93 @@ body {
   text-align: center;
   padding: 20px 17px;
 }
-
+.menu-link:hover {
+  color: #756257;
+}
+.menu-link:active {
+  color: #756257;
+  opacity: 30%;
+}
+.menu-icon {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #000000;
+}
+.menu-user-link {
+  position: relative;
+  padding: 20px 12px;
+  min-width: 18px;
+  min-height: 18px;
+}
+.menu-user-link:hover .menu-icon {
+  fill: #756257;
+}
+.menu-user-link:active .menu-icon {
+  fill: #756257;
+  opacity: 30%;
+}
+.menu-user-item + .menu-user-item {
+  margin-right: 25px;
+}
 .favorits-counter {
+  position: absolute;
+  top: 15px;
+  left: 24px;
   font-size: 10px;
   line-height: 13px;
+  font-weight: 400;
+  text-align: center;
+  color: #ffffff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #7db54f;
+  padding: 3px;
+  box-sizing: border-box;
+}
+.menu-user-link:active .favorits-counter-number {
+  color: #ffffff;
+  opacity: 30%;
 }
 .header-button-link {
+  display: flex;
   padding: 9px 34px;
   border-radius: 4px;
   background-color: #756257;
   color: #ffffff;
   font-size: 16px;
   line-height: 20px;
+  font-weight: 700;
+  text-decoration: none;
   text-transform: uppercase;
+  flex-basis: auto;
+}
+.button-brown:hover {
+  background-color: #615048;
+}
+.button-brown:active {
+  background-color: #615048;
+}
+.button-brown:active .button-brown-text {
+  opacity: 30%;
+}
+.button-brown:focus {
+  outline: none;
+  background-color: #615048;
+  box-shadow: 0px 0px 0px 3px #83b3d3;
 }
 /* ----- подвал с контактами ----- */
 .footer-bottom-wrapper {
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
+  width: 1056px;
+  margin: -15px auto 30px;
+  justify-content: space-between;
 }
-.footer-social {
-  margin-left: 72px;
-  margin-right: 61px;
-}
+
 .footer-social-list {
   display: flex;
   flex-wrap: wrap;
@@ -117,10 +193,32 @@ body {
   align-items: center;
   list-style-type: none;
 }
-.footer-social-item {
-  width: 20px;
-  height: 20px;
-  margin-right: 30px;
+.footer-social-icon {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  margin-left: -10px;
+  margin-right: 4px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.icon-social {
+  fill: #83b3d3;
+}
+.footer-social-icon:hover .icon-social {
+  fill: #68a2ca;
+}
+.footer-social-icon:active .icon-social {
+  fill: #68a2ca;
+  opacity: 30%;
+}
+.footer-social-icon:focus {
+  box-shadow: inset 0 0 0 3px #83b3d3;
+  outline: none;
+}
+.footer-social-icon:focus .icon-social {
+  fill: #68a2ca;
 }
 .footer-social-item:last-child {
   margin-right: 0;
@@ -130,19 +228,69 @@ body {
   text-decoration: none;
   font-size: 40px;
   line-height: 40px;
-  width: 720px;
+  padding: 15px;
+  border-radius: 10px;
   text-align: center;
-  margin-right: 53px;
 }
+.footer-phone-link:hover {
+  color: 756257;
+}
+.footer-phone-link:active {
+  color: 756257;
+  opacity: 30%;
+}
+.footer-phone-link:focus {
+  color: 756257;
+  outline: none;
+  box-shadow: inset 0 0 0 3px #83b3d3;
+}
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 70px;
+  margin-right: -20px;
+  border-radius: 10px;
+}
+.about-icon {
+  fill: #000000;
+}
+.about:hover .about-icon {
+  fill: #756257;
+}
+.about:active .about-icon {
+  fill: #756257;
+  opacity: 30%;
+}
+.about:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 3px #83b3d3;
+}
+.about:focus .about-icon {
+  fill: #756257;
+}
+
 /* -------------------- Стили для index.html --------------------  */
 
 .main-header {
+  position: relative;
+  top: -8px;
   background: #5f9ea0;
   background-image: url("/images/index/background-top.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   padding-top: 51px;
   margin-bottom: 63px;
+}
+.main-header::after {
+  position: absolute;
+  right: 0px;
+  bottom: 0;
+  left: 0px;
+  height: 57px;
+  background-image: url("/images/index/background-bottom-mask.svg");
+  content: "";
 }
 .logo {
   display: block;
@@ -246,6 +394,30 @@ body {
 .item-bridge .advantage-description {
   color: #ffffff;
 }
+.item-town-description,
+.item-bridge-description {
+  padding: 98px 90px 78px;
+}
+.item-area,
+.item-road,
+.item-tourists {
+  padding: 98px 75px 77px;
+}
+.recommendation {
+  padding: 184px 75px 79px;
+  background-repeat: no-repeat;
+  background-position: center bottom 223px;
+}
+.item-house {
+  background-image: url("/images/index/advantage-icons/house.svg");
+}
+.item-food {
+  background-image: url("/images/index/advantage-icons/burger.svg");
+}
+.item-souvenirs {
+  background-image: url("/images/index/advantage-icons/souvenir.svg");
+}
+
 /* ----- переход к бронированию ----- */
 .intrested {
   text-align: center;
@@ -317,6 +489,7 @@ body {
 .newsletter-field {
   box-sizing: border-box;
   background-color: #f2f2f2;
+  font-size: 18px;
   line-height: 26px;
   border: none;
   width: 600px;
@@ -325,6 +498,19 @@ body {
   margin: 0;
   border-radius: 10px 0 0 10px;
 }
+
+.newsletter-field:hover {
+  background-color: #e6e6e6;
+}
+.newsletter-field:focus {
+  outline: none;
+  background-color: #e6e6e6;
+  box-shadow: 0 0 0 3px #83b3d3;
+}
+/* .newsletter-field-error {
+  background-color: #ffffff;
+  box-shadow: inset 0 0 0 2px #ff5757;
+} */
 .newsletter-button {
   background: #83b3d3;
   color: #ffffff;
@@ -338,6 +524,22 @@ body {
   width: 200px;
   padding: 17px 0;
   border-radius: 0 10px 10px 0;
+  cursor: pointer;
+}
+.newsletter-button:hover {
+  background: #68a2ca;
+  box-shadow: 0 0 0 0;
+}
+.newsletter-button:focus {
+  outline: none;
+  background: #68a2ca;
+  box-shadow: 0 0 0 3px #756257;
+}
+.newsletter-button:active {
+  background: #68a2ca;
+}
+.newsletter-button:active .newsletter-button-text {
+  opacity: 30%;
 }
 /* ------------- Стили для Catalog.html -------------------- */
 .header-search {
