@@ -81,7 +81,7 @@ body {
   position: absolute;
   left: 17px;
   right: 17px;
-  bottom: 2px;
+  bottom: -1px;
   height: 2px;
   background-color: #756257;
   content: "";
@@ -95,7 +95,7 @@ body {
   color: inherit;
   text-decoration: none;
   text-align: center;
-  padding: 20px 17px;
+  padding: 19px 17px;
 }
 .menu-link:hover {
   color: #756257;
@@ -287,7 +287,6 @@ body {
 
 .main-header {
   position: relative;
-  top: -3px;
   background: #5f9ea0;
   background-image: url("../images/index/background-top.jpg");
   background-size: 100% auto;
@@ -556,7 +555,6 @@ body {
 /* ------------- Стили для Catalog.html -------------------- */
 .header-search {
   position: relative;
-  top: -3px;
   background: #5f9ea0;
   background-image: url("../images/catalog/catalog-background-top.jpg");
   background-size: 100% auto;
