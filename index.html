@@ -68,7 +68,7 @@
             alt="Welcome to the gorgeous. Sedona because the Grand Canyon sucks" class="logo" width="458" height="352">
         </div>
         <div class="slogan">
-          <p class="slogan-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+          <p class="slogan-title">Седона — небольшой городок в Аризоне,<br>заслуживающий большего!</p>
           <p class="slogan-advantages">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
         </div>
         <!--Преимущества-->
@@ -132,7 +132,8 @@
         <section class="intrested">
           <h2 class="visually-hidden">Переход к бронированию гостиницы</h2>
           <p class="intrested-title">Заинтересовались?</p>
-          <p class="intrested-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в
+          <p class="intrested-text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц
+            в
             Седоне</p>
           <a href="#" class="intrested-button button-brown">
             <span class="button-brown-text">Поиск гостиницы в Седоне</span>
@@ -146,7 +147,7 @@
       <!--Подписка на рассылку-->
       <section class="footer-newsletter">
         <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
-        <p class="newsletter-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <p class="newsletter-text">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
           <input class="newsletter-field newsletter-field-error" type="email" placeholder="Ваш e-mail"
             name="newsletter-email">
@@ -240,6 +241,47 @@
         </a>
       </div>
     </footer>
+  </div>
+  <div class="modal-container modal-container-close">
+    <div class="modal modal-hotel-search">
+      <button class="modal-close-button">
+        <span class="visually-hidden">Закрыть окно</span>
+      </button>
+      <section class="modal-content">
+        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+        <form class="form-hotel-search" action="https://echo.htmlacademy.ru/" method="post">
+          <label class="label-check-in modal-text" for="check-in">Дата заезда:</label>
+          <input class="modal-field field-check-in modal-text" type="text" name="check-in-date"
+            placeholder="27 апреля 2020" id="check-in">
+          <span class="error-message">Мы не можем отправить вас в прошлое.</span>
+          <label class="label-check-out modal-text" for="check-out">Дата выезда:</label>
+          <input class="modal-field field-check-out modal-text" type="text" name="check-out-date"
+            placeholder="1 сентября 2021" id="check-out">
+          <span class="success-message">На эти даты есть свободные номера. Пока есть.</span>
+          <label class="adult-counter-label modal-text" for="adult-counter">Взрослые:</label>
+          <div class="adult-counter modal-text" id="adult-counter">
+            <button class="counter-button button-minus" type="button"></button>
+            2
+            <button class=" counter-button button-plus" type="button"></button>
+          </div>
+          <span class="kids-counter-label">
+            <label class="kids-counter-label modal-text" for="kids-counter">Дети:</label>
+            <span class="tooltip">
+              <button class="tooltip-toggle" aria-labelledby="tooltip-label">i</button>
+              <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с
+                вами, возраст которых от 6 до 18 лет.
+                Дети до 6 лет размещаются бесплатно.</span>
+            </span>
+          </span>
+          <div class="kids-counter modal-text" id="kids-counter">
+            <button class="counter-button button-minus" type="button"></button>
+            1
+            <button class=" counter-button button-plus" type="button"></button>
+          </div>
+          <button class=" modal-button" type="submit">Найти</button>
+        </form>
+      </section>
+    </div>
   </div>
 </body>
 
