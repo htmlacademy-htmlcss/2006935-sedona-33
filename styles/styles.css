@@ -488,11 +488,13 @@ body {
   text-transform: uppercase;
 }
 .newsletter-text {
-  font-size: 22px;
-  line-height: 26px;
   padding: 0;
   margin: 0;
   margin-bottom: 42px;
+
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
 }
 .newsletter-form {
   display: flex;
@@ -552,14 +554,363 @@ body {
 .newsletter-button:active .newsletter-button-text {
   opacity: 30%;
 }
-/* ------------- Стили для Catalog.html -------------------- */
+
+/* ------------- Стили для модального окна -------------  */
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.modal-container-close {
+  display: none;
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 60px 70px 70px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+}
+
+.modal-hotel-search {
+  width: 715px;
+  box-sizing: border-box;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 54px;
+  right: 70px;
+
+  width: 53px;
+  height: 53px;
+
+  border-radius: 50%;
+  border: none;
+  background-color: #f2f2f2;
+  background-image: url("../images/icons/modal-close.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  cursor: pointer;
+}
+
+.modal-close-button:hover {
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:focus {
+  outline: none;
+  background-color: #e6e6e6;
+  box-shadow: 0 0 0 3px #83b3d3;
+}
+
+.modal-close-button:active {
+  background-color: #e6e6e6;
+  opacity: 30%;
+}
+
+.modal-title {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 60px;
+
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.form-hotel-search {
+  display: grid;
+  grid-template-columns: 155px 133px 153px 133px;
+  grid-template-rows: repeat(5, auto) 40px auto;
+}
+
+.modal-text {
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: 700;
+}
+
+.label-check-in {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  align-self: center;
+}
+
+.modal-field {
+  padding: 5px 0 5px 19px;
+
+  border: none;
+  border-radius: 4px;
+  background-color: #f2f2f2;
+  background-image: url("../images/icons/calendar.svg");
+  background-repeat: no-repeat;
+  background-position: right 19px center;
+}
+
+.modal-field:hover {
+  background-color: #e6e6e6;
+}
+
+.modal-field:focus {
+  outline: none;
+  background-color: #e6e6e6;
+  box-shadow: 0 0 0 3px #83b3d3;
+}
+
+.modal-field:active {
+  outline: none;
+  background-color: #ffffff;
+  box-shadow: inset 0 0 0 2px #000000;
+}
+
+.modal-field:active .modal-text::-webkit-input-placeholder {
+  color: #000000;
+}
+
+.modal-field:active .modal-text::-moz-placeholder {
+  color: #000000;
+}
+
+.field-check-in {
+  grid-column: 2 / -1;
+  grid-row: 1 / 2;
+}
+
+.error-message {
+  grid-column: 2 / -1;
+  grid-row: 2 / 3;
+
+  margin-bottom: 11px;
+
+  font-size: 16px;
+  line-height: 40px;
+  color: #ff5757;
+}
+
+.label-check-out {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  align-self: center;
+}
+
+.field-check-out {
+  grid-column: 2 / -1;
+  grid-row: 3 / 4;
+}
+
+.success-message {
+  grid-column: 2 / -1;
+  grid-row: 4 / 5;
+
+  margin-bottom: 11px;
+
+  font-size: 16px;
+  line-height: 40px;
+}
+
+.adult-counter-label {
+  grid-column: 1 / 2;
+  grid-row: 5 / 6;
+  align-self: center;
+}
+
+.adult-counter {
+  position: relative;
+  grid-column: 2 / 3;
+  grid-row: 5 / 6;
+
+  text-align: center;
+
+  background-color: #f2f2f2;
+  border-radius: 4px;
+}
+
+.kids-counter-label {
+  position: relative;
+  grid-column: 3 / 4;
+  grid-row: 5 / 6;
+
+  margin-left: 28px;
+}
+
+.tooltip {
+  position: absolute;
+  margin-top: 8px;
+  margin-left: 10px;
+}
+
+.tooltip-toggle {
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 25px;
+  height: 25px;
+  background-color: #83b3d3;
+  border-radius: 50%;
+  color: #ffffff;
+}
+.tooltip-toggle:hover {
+  background-color: #68a2ca;
+}
+
+.tooltip-text {
+  position: absolute;
+  top: 100%;
+  right: 50%;
+  display: block;
+  width: 256px;
+  padding: 15px 18px 18px 22px;
+  margin-top: 15px;
+
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+
+  transform: translateX(50%);
+  box-sizing: border-box;
+  background-color: #333333;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
+  display: none;
+}
+
+.tooltip-text::after {
+  position: absolute;
+  top: -9px;
+  left: 0;
+  right: 0;
+
+  width: 19px;
+  height: 9px;
+  margin-left: auto;
+  margin-right: auto;
+
+  content: "";
+  background-image: url("../images/icons/tooltip_triangle.svg");
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
+
+.kids-counter {
+  position: relative;
+  grid-column: 4 / 5;
+  grid-row: 5 / 6;
+
+  text-align: center;
+
+  background-color: #f2f2f2;
+  border-radius: 4px;
+}
+
+.counter-button {
+  width: 25px;
+  height: 25px;
+
+  border: none;
+  border-radius: 4px;
+}
+
+.counter-button:hover {
+  opacity: 100%;
+}
+
+.counter-button:active {
+  outline: none;
+}
+
+.counter-button:focus {
+  opacity: 100%;
+  outline: none;
+  box-shadow: inset 0 0 0 3px #83b3d3;
+}
+
+.button-minus {
+  position: absolute;
+  top: 50%;
+  left: 19px;
+
+  opacity: 30%;
+
+  transform: translateY(-50%);
+  background: transparent;
+  background-image: url("../images/icons/minus.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.button-plus {
+  position: absolute;
+
+  top: 50%;
+  right: 19px;
+
+  opacity: 30%;
+
+  transform: translateY(-50%);
+  background: transparent;
+  background-image: url("../images/icons/plus.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.modal-button {
+  grid-column: 1 / -1;
+  grid-row: 7 / 8;
+
+  padding: 10px 0 10px 0;
+  box-sizing: border-box;
+
+  font-size: 20px;
+  line-height: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  background-color: #83b3d3;
+  border: none;
+  border-radius: 10px;
+}
+
+.modal-button:hover {
+  background-color: #68a2ca;
+}
+
+.modal-button:focus {
+  outline: none;
+  background-color: #68a2ca;
+  box-shadow: 0 0 0 3px #756257;
+}
+
+.modal-button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #68a2ca;
+}
+
+/* ------------- Стили для Catalog.html ------------- */
+
 .header-search {
   position: relative;
   background: #5f9ea0;
   background-image: url("../images/catalog/catalog-background-top.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
-  padding: 35px 72px 83px;
+  padding: 34px 72px 83px;
   margin-bottom: 44px;
 }
 .catalog-header-title {
@@ -579,7 +930,9 @@ body {
 
   padding: 0;
   margin: 0;
+  margin-top: -8px;
   margin-bottom: 45px;
+  margin-left: -5px;
 
   font-size: 16px;
   line-height: 21px;
@@ -646,14 +999,37 @@ body {
 /* ----- Фильтр ----- */
 
 .hotels-filter {
-  display: flex;
+  display: grid;
+  grid-template-columns: 150px 67px 145px 167px 287px 81px 160px;
+}
+
+.filter-infrastructure {
+  grid-column: 1 / 2;
+}
+
+.filter-housing {
+  grid-column: 3 / 4;
+}
+
+.filter-price {
+  grid-column: 5 / 6;
+}
+
+.filter-buttons {
+  grid-column: 7 / 8;
 }
 
 .hotels-filter-group {
+  margin: 0;
+  padding: 0;
   color: #ffffff;
+  border: none;
 }
 
 .hotels-filter-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
@@ -666,8 +1042,41 @@ body {
   margin: 0;
 }
 
+.hotels-filter-item:not(:last-child) {
+  margin-bottom: 13px;
+}
+
 .control {
+  position: relative;
+  display: block;
+  padding-left: 39px;
   line-height: 23px;
+}
+
+.control-mark {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.control:hover .control-mark {
+  background-color: #ffffff;
+  opacity: 60%;
+}
+
+.control:focus .control-mark {
+  background-color: #ffffff;
+  opacity: 60%;
+  box-shadow: 0 0 0 3px #83b3d3;
+}
+
+.control:active .control-mark {
+  background-color: #ffffff;
+  opacity: 30%;
 }
 
 .control-input {
@@ -677,9 +1086,159 @@ body {
   border: 2px solid #ffffff;
 }
 
+/* Когда указываю галочку с помощью content, всё работает.
+Когда добавляю галочку как фоновое изображение, но content c URL,
+тоже всё работает. Как только убираю путь из контента, всё работать перестаёт. */
+.control-input[type="checkbox"]:checked + .control-mark::before {
+  position: absolute;
+  top: -2px;
+  left: 4px;
+  /* background-image: url("../images/icons/tick.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  content: ""; */
+  content: url("../images/icons/tick.svg");
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #3f5e72;
+  border-radius: 50%;
+  content: "";
+}
+
+.control:hover .control-input[type="radio"] + .control-mark {
+  opacity: 100%;
+}
+
+.control:focus .control-input[type="radio"]:checked + .control-mark {
+  opacity: 100%;
+  box-shadow: 0 0 0 3px #83b3d3;
+}
+
+.control:focus .control-input[type="radio"]:not(:checked) + .control-mark {
+  opacity: 100%;
+  box-shadow: inset 0 0 0 3px #83b3d3;
+}
+
+.control:hover .control-input[type="radio"] + .control-mark {
+  opacity: 100%;
+}
+
+.control:active .control-input[type="radio"] + .control-mark {
+  opacity: 100%;
+}
+
+.filter-price .hotels-filter-title {
+  margin-bottom: 34px;
+}
+
+/* -- Range -- */
+
+.range-wrapper {
+  position: relative;
+  display: flex;
+}
+
+.control-input {
+  width: 143px;
+  height: 48px;
+  box-sizing: border-box;
+
+  padding: 14px 0px 11px 19px;
+  margin-bottom: 32px;
+
+  line-height: 23px;
+
+  border: 2px solid #ffffff;
+}
+
+.input-from {
+  border-radius: 4px 0 0 4px;
+}
+
+.input-to {
+  border-left: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 0 4px 4px 0;
+}
+
+.control-input:hover {
+  border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.hotels-filter-price {
+  position: relative;
+}
+
+.input-mark {
+  position: absolute;
+  top: 11px;
+  right: 16px;
+  line-height: 23px;
+  color: #ffffff;
+  opacity: 30%;
+}
+
+.range-scale {
+  position: relative;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.range-bar {
+  position: absolute;
+  left: 0;
+  height: 4px;
+  width: 227px;
+  background-color: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.toggle-min {
+  top: -8px;
+}
+
+.toggle-max {
+  top: -8px;
+  right: -10px;
+}
+
+.range-toggle:hover {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:focus {
+  box-shadow: 0 0 0 3px #83b3d3, 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:active {
+  box-shadow: 0 0 0 2px #83b3d3, 0 7px 15px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* Кнопки фильтра */
+
 .filter-buttons {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .apply-button {
@@ -689,7 +1248,8 @@ body {
 
   width: 160px;
   height: 48px;
-  margin-bottom: 10px;
+  margin-top: 60px;
+  margin-bottom: 18px;
 
   font-size: 16px;
   line-height: 21px;
@@ -706,12 +1266,36 @@ body {
   background: #68a2ca;
 }
 
+.apply-button:focus {
+  background: #68a2ca;
+  box-shadow: 0 0 0 3px #ffffff;
+}
+
+.apply-button:active {
+  background: #68a2ca;
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .cancel-button {
+  padding: 4px 10px 4px 10px;
   background-color: inherit;
   color: #ffffff;
   font-size: 18px;
+  line-height: 23px;
   border: none;
-  padding: 10px;
+}
+
+.cancel-button:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.cancel-button:focus {
+  box-shadow: 0 0 0 3px #83b3d3;
+  border-radius: 4px;
+}
+
+.cancel-button:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 /* ----- сортировка ----- */
@@ -747,8 +1331,11 @@ body {
   font-size: 18px;
   line-height: 23px;
 
+  background-color: #ffffff;
+  background: url("../images/icons/dropdown.svg") no-repeat right 19px center;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
+  appearance: none;
 }
 
 .select-control:hover,
@@ -758,8 +1345,7 @@ body {
 }
 
 .select-control:active {
-  color: rgba(51, 51, 51, 0.3);
-  border: 2px solid #e6e6e6;
+  opacity: 30%;
 }
 
 .sorting-view {
@@ -827,13 +1413,13 @@ body {
   display: flex;
 }
 
+.hotel-card-image-link:active {
+  opacity: 30%;
+}
+
 .hotel-card-image-link:focus {
   outline: none;
   box-shadow: 0 0 0 3px #83b3d3;
-}
-
-.hotel-card-image-link:active {
-  opacity: 30%;
 }
 
 .hotel-card-image {
@@ -1054,12 +1640,27 @@ body {
 }
 
 .select-cards {
-  color: #333333;
-  border: 2px solid #e5e5e5;
-  margin-left: 51px;
   width: 160px;
+  margin-left: 51px;
   padding: 17px 0 15px 17px;
+
+  color: #333333;
+
+  background-color: #ffffff;
+  background: url("../images/icons/dropdown.svg") no-repeat right 19px center;
+  border: 2px solid #e5e5e5;
   border-radius: 4px;
+  appearance: none;
+}
+
+.select-cards:hover,
+.select-cards:focus {
+  outline: none;
+  border: 2px solid #83b3d3;
+}
+
+.select-cards:active {
+  opacity: 30%;
 }
 
 .newsletter-catalog {
