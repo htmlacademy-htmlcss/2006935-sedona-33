@@ -571,7 +571,7 @@ body {
 }
 
 .modal-container-close {
-  /* display: none; */
+  display: none;
 }
 
 .modal {
@@ -848,6 +848,7 @@ body {
   opacity: 30%;
 
   transform: translateY(-50%);
+  background: transparent;
   background-image: url("../images/icons/minus.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -862,6 +863,7 @@ body {
   opacity: 30%;
 
   transform: translateY(-50%);
+  background: transparent;
   background-image: url("../images/icons/plus.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
