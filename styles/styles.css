@@ -520,10 +520,12 @@ body {
   background-color: #e6e6e6;
   box-shadow: 0 0 0 3px #83b3d3;
 }
+
 /* .newsletter-field-error {
   background-color: #ffffff;
   box-shadow: inset 0 0 0 2px #ff5757;
 } */
+
 .newsletter-button {
   background: #83b3d3;
   color: #ffffff;
@@ -738,13 +740,17 @@ body {
   border-radius: 4px;
 }
 
-.kids-counter-label {
+.kids-counter-label-wrapper {
   position: relative;
   grid-column: 3 / 4;
   grid-row: 5 / 6;
 
-  margin-left: 28px;
+  margin: 0;
+  padding: 0;
+  margin-left: 56px;
 }
+
+/* ----- Tooltip ----- */
 
 .tooltip {
   position: absolute;
@@ -752,7 +758,7 @@ body {
   margin-left: 10px;
 }
 
-.tooltip-toggle {
+.kids-counter-tooltip-info {
   border: none;
   padding: 0;
   margin: 0;
@@ -762,7 +768,7 @@ body {
   border-radius: 50%;
   color: #ffffff;
 }
-.tooltip-toggle:hover {
+.kids-counter-tooltip-info:hover {
   background-color: #68a2ca;
 }
 
@@ -920,7 +926,6 @@ body {
   color: #ffffff;
   margin: 0;
   padding: 0;
-  margin-bottom: 5px;
 }
 
 /* ----- Breadcrumbs ----- */
@@ -930,7 +935,6 @@ body {
 
   padding: 0;
   margin: 0;
-  margin-top: -8px;
   margin-bottom: 45px;
   margin-left: -5px;
 
@@ -999,31 +1003,28 @@ body {
 /* ----- Фильтр ----- */
 
 .hotels-filter {
-  display: grid;
-  grid-template-columns: 150px 67px 145px 167px 287px 81px 160px;
-}
-
-.filter-infrastructure {
-  grid-column: 1 / 2;
-}
-
-.filter-housing {
-  grid-column: 3 / 4;
-}
-
-.filter-price {
-  grid-column: 5 / 6;
-}
-
-.filter-buttons {
-  grid-column: 7 / 8;
+  display: flex;
+  flex-direction: row;
 }
 
 .hotels-filter-group {
   margin: 0;
   padding: 0;
+
   color: #ffffff;
   border: none;
+}
+
+.filter-infrastructure {
+  margin-right: 67px;
+}
+
+.filter-housing {
+  margin-right: 168px;
+}
+
+.filter-price {
+  margin-right: 71px;
 }
 
 .hotels-filter-title {
@@ -1086,18 +1087,17 @@ body {
   border: 2px solid #ffffff;
 }
 
-/* Когда указываю галочку с помощью content, всё работает.
-Когда добавляю галочку как фоновое изображение, но content c URL,
-тоже всё работает. Как только убираю путь из контента, всё работать перестаёт. */
 .control-input[type="checkbox"]:checked + .control-mark::before {
   position: absolute;
-  top: -2px;
+  top: 5px;
   left: 4px;
-  /* background-image: url("../images/icons/tick.svg");
+
+  width: 12px;
+  height: 10px;
+
+  background-image: url("../images/icons/tick.svg");
   background-repeat: no-repeat;
-  background-position: 50% 50%;
-  content: ""; */
-  content: url("../images/icons/tick.svg");
+  content: "";
 }
 
 .control-input[type="radio"] + .control-mark {
@@ -1145,14 +1145,12 @@ body {
 /* -- Range -- */
 
 .range-wrapper {
-  position: relative;
   display: flex;
 }
 
 .control-input {
   width: 143px;
   height: 48px;
-  box-sizing: border-box;
 
   padding: 14px 0px 11px 19px;
   margin-bottom: 32px;
@@ -1160,6 +1158,7 @@ body {
   line-height: 23px;
 
   border: 2px solid #ffffff;
+  box-sizing: border-box;
 }
 
 .input-from {
@@ -1167,12 +1166,22 @@ body {
 }
 
 .input-to {
-  border-left: 2px solid rgba(255, 255, 255, 0.6);
   border-radius: 0 4px 4px 0;
 }
 
 .control-input:hover {
   border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.control-input:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 3px #81b3d2, 0 0 0 3px #81b3d2;
+}
+
+.control-input:active {
+  outline: none;
+  border: 2px solid ##ffffff;
+  background-color: #756257;
 }
 
 .hotels-filter-price {
@@ -1190,6 +1199,7 @@ body {
 
 .range-scale {
   position: relative;
+  width: 287px;
   height: 4px;
   background-color: rgba(255, 255, 255, 0.3);
 }

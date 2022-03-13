@@ -260,23 +260,31 @@
           <span class="success-message">На эти даты есть свободные номера. Пока есть.</span>
           <label class="adult-counter-label modal-text" for="adult-counter">Взрослые:</label>
           <div class="adult-counter modal-text" id="adult-counter">
-            <button class="counter-button button-minus" type="button"></button>
+            <button class="counter-button button-minus" type="button">
+              <span class="visually-hidden">Уменьшить количество</span>
+            </button>
             2
-            <button class=" counter-button button-plus" type="button"></button>
+            <button class=" counter-button button-plus" type="button">
+              <span class="visually-hidden">Увеличить количество</span>
+            </button>
           </div>
-          <span class="kids-counter-label">
+          <p class="kids-counter-label-wrapper">
             <label class="kids-counter-label modal-text" for="kids-counter">Дети:</label>
             <span class="tooltip">
-              <button class="tooltip-toggle" aria-labelledby="tooltip-label">i</button>
+              <button class="kids-counter-tooltip-info" aria-labelledby="tooltip-label">i</button>
               <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с
                 вами, возраст которых от 6 до 18 лет.
                 Дети до 6 лет размещаются бесплатно.</span>
             </span>
-          </span>
+          </p>
           <div class="kids-counter modal-text" id="kids-counter">
-            <button class="counter-button button-minus" type="button"></button>
+            <button class="counter-button button-minus" type="button">
+              <span class="visually-hidden">Уменьшить количество</span>
+            </button>
             1
-            <button class=" counter-button button-plus" type="button"></button>
+            <button class=" counter-button button-plus" type="button">
+              <span class="visually-hidden">Увеличить количество</span>
+            </button>
           </div>
           <button class=" modal-button" type="submit">Найти</button>
         </form>
