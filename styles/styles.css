@@ -942,6 +942,9 @@ body {
   margin-left: 56px;
 }
 
+.kids-counter-label {
+}
+
 /* ----- Tooltip ----- */
 
 .tooltip {
@@ -949,8 +952,6 @@ body {
 
   margin-top: 9px;
   margin-left: 11px;
-
-  overflow: hidden;
 }
 
 .kids-counter-tooltip-info {
@@ -964,6 +965,7 @@ body {
   background-color: #83b3d3;
   border-radius: 50%;
   color: #ffffff;
+  overflow: hidden;
 }
 
 .kids-counter-tooltip-info:hover {
@@ -990,8 +992,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
   transform: translateX(50%);
-
-  /* display: none; */
+  display: none;
 }
 
 .tooltip-text::after {
