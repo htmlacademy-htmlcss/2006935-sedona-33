@@ -1359,11 +1359,6 @@ body {
   opacity: 100%;
 }
 
-.control-input[type="radio"]:focus-visible + .control-mark {
-  opacity: 100%;
-  box-shadow: 0 0 0 3px #83b3d3;
-}
-
 .hotels-filter-list:focus-within .control-input[type="radio"] + .control-mark {
   box-shadow: inset 0 0 0 3px #83b3d3;
 }
